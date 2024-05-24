@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN python3 -m pip install --user pipx && \
     python3 -m pipx ensurepath && \
     pipx --global ensurepath && \
-    pipx install poetry==1.2.0
+    pipx install poetry==1.8.0
