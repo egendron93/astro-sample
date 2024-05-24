@@ -4,7 +4,7 @@ sample python code using astropy
 ## poetry
 
 ```
-poetry init
+poetry lock
 ```
 
 ```
@@ -12,5 +12,5 @@ poetry install
 ```
 
 ```
-poetry run python aura.py
+poetry run python astropy_test.py
 ```
