@@ -1,10 +1,11 @@
 """
-Input a star, query the coordinates from Simbad and print out the Galactic Standard of Rest.
+Input a star, use the from name function to get coordinates and return the Galactic Standard of Rest.
 
 Uses the example from:
 https://docs.astropy.org/en/latest/generated/examples/coordinates/rv-to-gsr.html#convert-a-radial-velocity-to-the-galactic-standard-of-rest-gsr
 """
 
+import argparse
 import astropy.coordinates as coord
 import astropy.units as u
 
@@ -44,8 +45,12 @@ def rv_to_gsr(c, v_sun=None):
     return c.radial_velocity + v_proj
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--name', action='store', type=str, help='CDS name resolver query string.')
+    args = parser.parse_args()
+
     icrs = coord.SkyCoord(
-        coord.SkyCoord.from_name("HD 155967"),
+        coord.SkyCoord.from_name(args.name),
         radial_velocity=-16.1 * u.km / u.s,
         frame="icrs",
     )
