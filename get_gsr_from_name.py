@@ -28,7 +28,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--query', action='store', type=str, help='CDS name resolver query string.')
     parser.add_argument('--radial_velocity', action='store', type=float,
-                        default=-16.1, help='Radial velocity.')
+                        default=-16.1, help='Radial velocity (km/s).')
     args = parser.parse_args()
 
     icrs = query_to_coord(args.query, args.radial_velocity)
