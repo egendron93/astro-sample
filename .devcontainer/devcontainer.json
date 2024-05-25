@@ -3,7 +3,7 @@
   
     "customizations": {
       "vscode": {
-        "extensions": ["ms-python.python", "ms-python.debugpy"]
+        "extensions": ["ms-python.python", "ms-python.debugpy", "ms-python.pylint"]
       }
     }
   }

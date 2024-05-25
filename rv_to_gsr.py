@@ -4,7 +4,6 @@ https://docs.astropy.org/en/latest/generated/examples/coordinates/rv-to-gsr.html
 """
 
 import astropy.coordinates as coord
-import astropy.units as u
 
 coord.galactocentric_frame_defaults.set("latest")
 
