@@ -1,6 +1,5 @@
 """
-@file aura.py
-@author Edwin
+run tests to determine if environment is suitable for development with astropy.
 """
 
 import astropy
